@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CommentList from 'components/CommentList/CommentList';
 import CommentForm from 'components/CommentForm/CommentForm';
@@ -9,6 +9,7 @@ const CarDetails = () => {
   const [vehicle, setVehicle] = useState(null);
   const [loading, setLoading] = useState(true);
   const [comments, setComments] = useState([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchVehicleDetails = async () => {
@@ -54,6 +55,7 @@ const handleAddComment = newComment => {
 
   return (
     <div>
+      <button onClick={() => navigate('/')}>back</button>
       <h2>Деталі автомобіля</h2>
       <h3>{vehicle.brand}</h3>
       <p>Ціна: {vehicle.price}</p>

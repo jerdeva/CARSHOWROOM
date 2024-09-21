@@ -31,7 +31,7 @@ const App = () => {
         <h1>Автомобілі</h1>
         {loading ? <p>Загрузка...</p> : (
           <Routes>
-            <Route path="/" element={<CarList vehicles={vehicles} />} />
+            <Route path="/CARSHOWROOM" element={<CarList vehicles={vehicles} />} />
             <Route path="/vehicles/:vehicleId" element={<CarDetails />} />
             <Route path="*" element={<p>Сторінка не знайдена</p>} />
           </Routes>
