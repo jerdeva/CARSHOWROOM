@@ -1,1 +1,1 @@
-Посилання на розгорнутий застосунок https://github.com/jerdeva/CARSHOWROOM/tree/f252bd63117da96ea681ba2fb236dd782a514689
+Посилання на розгорнутий застосунок https://jerdeva.github.io/CARSHOWROOM/
