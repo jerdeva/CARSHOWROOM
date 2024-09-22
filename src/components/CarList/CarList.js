@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import SearchForm from 'components/SearchForm/SearchForm';
 
+import {
+  Container,
+  List,
+  Price,
+  Photo,
+  DescriptionWrap,
+} from './CarList.styled';
+
 
 
 const CarList = ({ vehicles }) => {
@@ -15,22 +23,32 @@ const CarList = ({ vehicles }) => {
   );
 
   return (
-    <div>
-      <SearchForm onSearchChange={handleSearchChange} />
-      <h2>Список автомобілів:</h2>
+    <Container>
+      <div>
+        <h1>Автомобілі</h1>
+        <SearchForm onSearchChange={handleSearchChange} />
+      </div>
       {filteredVehicles.length > 0 ? (
         filteredVehicles.map(vehicle => (
-          <div key={vehicle.id}>
-            <h3>{vehicle.brand}</h3>
-            {/* <img src={vehicle.images} alt="images" /> */}
-            <p>Ціна: {vehicle.price}</p>
-            <a href={`/vehicles/${vehicle.id}`}>Деталі</a>
-          </div>
+          <List key={vehicle.id}>
+            <DescriptionWrap>
+              <h3>{vehicle.brand}</h3>
+              {vehicle.images.length > 0 && (
+                <Photo
+                  src={vehicle.images[0]}
+                  alt={vehicle.title}
+                  style={{ margin: '10px' }}
+                />
+              )}
+              <Price>Ціна: {vehicle.price}</Price>
+            </DescriptionWrap>
+            <a href={`#/vehicles/${vehicle.id}`}>Деталі</a>
+          </List>
         ))
       ) : (
         <p>Автомобілі не найдены.</p>
       )}
-    </div>
+    </Container>
   );
 };
 

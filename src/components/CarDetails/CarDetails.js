@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CommentList from 'components/CommentList/CommentList';
 import CommentForm from 'components/CommentForm/CommentForm';
+import { Container, BTN } from './CarDetails.styled';
+
 
 const CarDetails = () => {
   const { vehicleId } = useParams();
@@ -54,8 +56,8 @@ const handleAddComment = newComment => {
   const allComments = [...(vehicle.reviews || []), ...comments];
 
   return (
-    <div>
-      <button onClick={() => navigate('/')}>back</button>
+    <Container>
+      <BTN onClick={() => navigate('/')}>back</BTN>
       <h2>Деталі автомобіля</h2>
       <h3>{vehicle.brand}</h3>
       <p>Ціна: {vehicle.price}</p>
@@ -71,9 +73,11 @@ const handleAddComment = newComment => {
           />
         ))}
       </div>
+      <p>Інформація про гарантію: {vehicle.warrantyInformation}</p>
+      <p>Статус доступності: {vehicle.availabilityStatus}</p>
       <CommentForm onAddComment={handleAddComment} vehicleId={vehicleId} />
       <CommentList comments={allComments} />{' '}
-    </div>
+    </Container>
   );
 };
 

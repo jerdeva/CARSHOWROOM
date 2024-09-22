@@ -1,4 +1,5 @@
 import React from 'react';
+import { SearchInput, SearchWrap } from './SearchForm.styled';
 
 const SearchForm = ({ onSearchChange }) => {
   const handleInputChange = event => {
@@ -6,13 +7,13 @@ const SearchForm = ({ onSearchChange }) => {
   };
 
   return (
-    <div>
-      <input
+    <SearchWrap>
+      <SearchInput
         type="text"
         placeholder="Пошук за брендом"
         onChange={handleInputChange}
       />
-    </div>
+    </SearchWrap>
   );
 };
 
