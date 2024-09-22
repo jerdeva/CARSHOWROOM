@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/CARSHOWROOM/static/css/main.e2516aeb.css",
-    "main.js": "/CARSHOWROOM/static/js/main.8be0bc44.js",
+    "main.css": "/CARSHOWROOM/static/css/main.4663a604.css",
+    "main.js": "/CARSHOWROOM/static/js/main.adea71f9.js",
     "index.html": "/CARSHOWROOM/index.html",
-    "main.e2516aeb.css.map": "/CARSHOWROOM/static/css/main.e2516aeb.css.map",
-    "main.8be0bc44.js.map": "/CARSHOWROOM/static/js/main.8be0bc44.js.map"
+    "main.4663a604.css.map": "/CARSHOWROOM/static/css/main.4663a604.css.map",
+    "main.adea71f9.js.map": "/CARSHOWROOM/static/js/main.adea71f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2516aeb.css",
-    "static/js/main.8be0bc44.js"
+    "static/css/main.4663a604.css",
+    "static/js/main.adea71f9.js"
   ]
 }
