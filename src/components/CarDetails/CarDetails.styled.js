@@ -3,11 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-  margin: 0 auto;
-  padding: 0px 30px;
-  margin-bottom: ${props => props.$bottom || '20px'};
-  margin-top: ${props => props.$top || '0px'};
+  margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
     width: 768px;

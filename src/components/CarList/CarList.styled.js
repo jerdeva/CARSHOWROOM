@@ -3,22 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
   margin: 0 auto;
   padding: 0px 30px;
   margin-bottom: ${props => props.$bottom || '20px'};
   margin-top: ${props => props.$top || '0px'};
-/* 
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding: 0px 50px;
-    margin-bottom: ${props => props.$bottom || '30px'};
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 1440px;
-    padding: 0px 128px;
-  } */
 `;
 
 
@@ -29,16 +17,6 @@ export const List = styled.div`
   row-gap: 20px;
   column-gap: 15px;
   margin-bottom: 100px;
-
-  /* @media screen and (min-width: 768px) {
-    row-gap: 30px;
-    column-gap: 20px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    row-gap: 50px;
-    column-gap: 29px;
-  } */
 `;
 
 

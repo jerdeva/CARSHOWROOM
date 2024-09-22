@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {FormSt} from './CommentForm.styled'
 
 const CommentForm = ({ onAddComment }) => {
   const [comment, setComment] = useState('');
@@ -23,7 +24,7 @@ const CommentForm = ({ onAddComment }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormSt onSubmit={handleSubmit}>
       <input
         type="text"
         value={reviewerName}
@@ -54,7 +55,7 @@ const CommentForm = ({ onAddComment }) => {
         required
       />
       <button type="submit">Додати</button>
-    </form>
+    </FormSt>
   );
 };
 
