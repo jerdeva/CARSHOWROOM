@@ -37,6 +37,8 @@ const handleSubmit = event => {
           onChange={e => setreviewerName(e.target.value)}
           placeholder="Name"
           required
+          maxLength="200"
+          minLength="3"
         />
         <input
           type="email"
@@ -44,6 +46,8 @@ const handleSubmit = event => {
           onChange={e => setreviewerEmail(e.target.value)}
           placeholder="Email"
           required
+          maxLength="200"
+          minLength="3"
         />
         <input
           type="number"
@@ -59,6 +63,8 @@ const handleSubmit = event => {
           onChange={e => setComment(e.target.value)}
           placeholder="Add a comment"
           required
+          maxLength="200"
+          minLength="8"
         />
         <BTN type="submit">Add</BTN>
       </FormSt>
