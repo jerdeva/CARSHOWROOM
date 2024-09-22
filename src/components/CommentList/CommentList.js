@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListItem } from './CommentList.styled';
+import { ListItem, List } from './CommentList.styled';
 
 const CommentList = ({ comments }) => {
   const sortedComments = [...comments].sort(
@@ -9,7 +9,7 @@ const CommentList = ({ comments }) => {
   return (
     <div>
       <h3>Comments:</h3>
-      <ul>
+      <List>
         {sortedComments.map((review, index) => (
           <ListItem key={index}>
             <p>
@@ -29,7 +29,7 @@ const CommentList = ({ comments }) => {
             </p>
           </ListItem>
         ))}
-      </ul>
+      </List>
     </div>
   );
 };
