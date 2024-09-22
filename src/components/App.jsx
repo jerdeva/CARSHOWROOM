@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 import CarList from './CarList/CarList';
-import { Route, Routes, HashRouter as Router } from 'react-router-dom';
+import {
+  Route, Routes,
+  // HashRouter as Router
+} from 'react-router-dom';
 import CarDetails from './CarDetails/CarDetails';
 import { Container } from './main.styled';
 
