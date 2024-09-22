@@ -10,7 +10,7 @@ export const SearchWrap = styled.div`
   border-radius: 40px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   transform: translate(-50%, -50%);
-  background: #cbbb;
+  background: #f3f3f5;
   transition: all 0.3s ease;
 
   &.focus {
@@ -27,7 +27,7 @@ export const SearchInput = styled.input`
   font-size: 16px;
   font-weight: 800;
   background: none;
-  color: #6b6674;
+  color: #215f77;
   height: 20px;
   border: none;
   appearance: none;

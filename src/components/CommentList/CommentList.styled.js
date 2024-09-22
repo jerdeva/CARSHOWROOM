@@ -10,3 +10,14 @@ width: fit-content;
 padding: 8px;
 `;
 
+export const Paragrapher = styled.p`
+  font-size: 20px;
+  color: #215f77;
+  font-weight: 400;
+`;
+
+export const NameSection = styled.h2`
+  font-size: 28px;
+  color: #215f77;
+  font-weight: 800;
+`;

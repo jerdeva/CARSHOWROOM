@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  min-width: 320px;
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -27,9 +28,9 @@ export const BTN = styled.button`
   text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
   padding: 0.5em 1em;
   outline: none;
-  border-radius: 3px;
-  background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86))
-    rgb(110, 112, 120);
+  border: none;
+  border-radius: 10px;
+  background: #215f77;
   box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5),
     0 0 1px 1px rgba(0, 1, 6, 0.2);
   transition: 0.2s ease-in-out;
@@ -40,4 +41,31 @@ export const MainPart = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const ImgWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+`;
+
+export const Img = styled.img`
+  background: linear-gradient(
+      180deg,
+      rgba(18, 20, 23, 0.5) 2.5%,
+      rgba(18, 20, 23, 0) 41.07%
+    ),
+    #f3f3f2;
+`;
+
+export const Brand = styled.h2`
+  font-size: 32px;
+  color: #215f77;
+  font-weight: 500;
+`;
+
+export const Paragrapher = styled.p`
+  font-size: 20px;
+  color: #215f77;
+  font-weight: 500;
 `;

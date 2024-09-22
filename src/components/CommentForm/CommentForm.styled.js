@@ -5,6 +5,26 @@ export const FormSt = styled.form`
   flex-direction: column;
   width: 300px;
   gap: 12px 0;
+  input {
+    font-size: 20px;
+    padding: 8px 8px 8px 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #064e8a;
+    outline: none;
+    color: black;
+    font-weight: 500;
+  }
+  textarea {
+    font-size: 20px;
+    padding: 8px 8px 8px 8px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #064e8a;
+    outline: none;
+    color: black;
+    font-weight: 500;
+  }
 `;
 
 export const BTN = styled.button`
@@ -21,4 +41,11 @@ export const BTN = styled.button`
   box-shadow: 0 1px rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.5),
     0 0 1px 1px rgba(0, 1, 6, 0.2);
   transition: 0.2s ease-in-out;
+`;
+
+
+export const NameSection = styled.h2`
+  font-size: 28px;
+  color: #215f77;
+  font-weight: 800;
 `;

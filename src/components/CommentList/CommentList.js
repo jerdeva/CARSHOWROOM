@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListItem, List } from './CommentList.styled';
+import { ListItem, List, Paragrapher, NameSection } from './CommentList.styled';
 
 const CommentList = ({ comments }) => {
   const sortedComments = [...comments].sort(
@@ -8,25 +8,25 @@ const CommentList = ({ comments }) => {
 
   return (
     <div>
-      <h3>Comments:</h3>
+      <NameSection>Comments:</NameSection>
       <List>
         {sortedComments.map((review, index) => (
           <ListItem key={index}>
-            <p>
+            <Paragrapher>
               <strong>Comment:</strong> {review.comment}
-            </p>
-            <p>
+            </Paragrapher>
+            <Paragrapher>
               <strong>Rating:</strong> {review.rating}
-            </p>
-            <p>
+            </Paragrapher>
+            <Paragrapher>
               <strong>Reviewer Name:</strong> {review.reviewerName}
-            </p>
-            <p>
+            </Paragrapher>
+            <Paragrapher>
               <strong>Reviewer Email:</strong> {review.reviewerEmail}
-            </p>
-            <p>
+            </Paragrapher>
+            <Paragrapher>
               <strong>Date:</strong> {new Date(review.date).toLocaleString()}{' '}
-            </p>
+            </Paragrapher>
           </ListItem>
         ))}
       </List>

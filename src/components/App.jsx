@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import CarDetails from './CarDetails/CarDetails';
 import { Container } from './main.styled';
+import { Layout } from './Layout/Layout';
 
 const App = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -31,11 +32,13 @@ const App = () => {
   return (
       <Container>
         {loading ? <p>Загрузка...</p> : (
-          <Routes>
-            <Route path="/" element={<CarList vehicles={vehicles} />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<CarList vehicles={vehicles} />} />
             <Route path="/vehicles/:vehicleId" element={<CarDetails />} />
             <Route path="*" element={<p>Сторінка не знайдена</p>} />
-          </Routes>
+          </Route>
+        </Routes>
         )}
       </Container>
   );

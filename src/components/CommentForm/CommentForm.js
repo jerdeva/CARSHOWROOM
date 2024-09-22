@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FormSt, BTN } from './CommentForm.styled';
+import { FormSt, BTN, NameSection } from './CommentForm.styled';
 
 const CommentForm = ({ onAddComment }) => {
   const [comment, setComment] = useState('');
@@ -29,7 +29,7 @@ const handleSubmit = event => {
 
   return (
     <div>
-      <h2>Leave your feedback</h2>
+      <NameSection>Leave your feedback</NameSection>
       <FormSt onSubmit={handleSubmit}>
         <input
           type="text"

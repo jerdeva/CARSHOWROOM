@@ -3,7 +3,15 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CommentList from 'components/CommentList/CommentList';
 import CommentForm from 'components/CommentForm/CommentForm';
-import { Container, BTN, MainPart } from './CarDetails.styled';
+import {
+  Container,
+  BTN,
+  MainPart,
+  ImgWrap,
+  Img,
+  Brand,
+  Paragrapher,
+} from './CarDetails.styled';
 
 
 const CarDetails = () => {
@@ -57,33 +65,33 @@ const handleAddComment = newComment => {
 
   return (
     <Container>
+      <BTN onClick={() => navigate('/')}>BACK</BTN>
       <MainPart>
-        <BTN onClick={() => navigate('/')}>BACK</BTN>
-        <h2>Car details</h2>
-        <h3>{vehicle.brand}</h3>
-        <p>
-          <strong>Price:</strong> {vehicle.price}$
-        </p>
-        <p>
-          <strong>Description:</strong> {vehicle.description}
-        </p>
-        <div>
-          <h3>Images:</h3>
+        {/* <h2>Car details</h2> */}
+        <Brand>{vehicle.brand}</Brand>
+        {/* <p>Images:</p> */}
+        <ImgWrap>
           {vehicle.images.map((image, index) => (
-            <img
+            <Img
               key={index}
               src={image}
               alt={vehicle.title}
               style={{ width: '200px', margin: '10px' }}
             />
           ))}
-        </div>
-        <p>
+        </ImgWrap>
+        <Paragrapher>
+          <strong>Price:</strong> {vehicle.price}$
+        </Paragrapher>
+        <Paragrapher>
+          <strong>Description:</strong> {vehicle.description}
+        </Paragrapher>
+        <Paragrapher>
           <strong>Warranty Information:</strong> {vehicle.warrantyInformation}
-        </p>
-        <p>
+        </Paragrapher>
+        <Paragrapher>
           <strong>Availability Status:</strong> {vehicle.availabilityStatus}
-        </p>
+        </Paragrapher>
       </MainPart>
       <CommentForm onAddComment={handleAddComment} vehicleId={vehicleId} />
       <CommentList comments={allComments} />{' '}

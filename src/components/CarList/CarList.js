@@ -8,7 +8,8 @@ import {
   Photo,
   DescriptionWrap,
   Details,
-  BtnWrap
+  BtnWrap,
+  Brand,
 } from './CarList.styled';
 
 
@@ -27,14 +28,14 @@ const CarList = ({ vehicles }) => {
   return (
     <Container>
       <div>
-        <h1>Cars</h1>
+        {/* <h1>Cars</h1> */}
         <SearchForm onSearchChange={handleSearchChange} />
       </div>
       {filteredVehicles.length > 0 ? (
         filteredVehicles.map(vehicle => (
           <List key={vehicle.id}>
             <DescriptionWrap>
-              <h3>{vehicle.brand}</h3>
+              <Brand>{vehicle.brand}</Brand>
               {vehicle.images.length > 0 && (
                 <Photo
                   src={vehicle.images[0]}
