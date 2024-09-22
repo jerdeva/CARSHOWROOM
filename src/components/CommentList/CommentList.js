@@ -2,26 +2,31 @@ import React from 'react';
 import { ListItem } from './CommentList.styled';
 
 const CommentList = ({ comments }) => {
+  const sortedComments = [...comments].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
   return (
     <div>
-      <h3>Коментарі:</h3>
+      <h3>Comments:</h3>
       <ul>
-        {comments.map((review, index) => (
+        {sortedComments.map((review, index) => (
           <ListItem key={index}>
             <p>
-              <strong>Коментар:</strong> {review.comment}
+              <strong>Comment:</strong> {review.comment}
             </p>
             <p>
-              <strong>Рейтинг:</strong> {review.rating}
+              <strong>Rating:</strong> {review.rating}
             </p>
             <p>
-              <strong>Ім'я рецензента:</strong> {review.reviewerName}
+              <strong>Reviewer Name:</strong> {review.reviewerName}
             </p>
             <p>
-              <strong>Email рецензента:</strong> {review.reviewerEmail}
+              <strong>Reviewer Email:</strong> {review.reviewerEmail}
             </p>
             <p>
-              <strong>Дата:</strong> {review.date}
+              <strong>Date:</strong> {new Date(review.date).toLocaleString()}{' '}
+              {/* Преобразуем дату в строку */}
             </p>
           </ListItem>
         ))}

@@ -58,33 +58,33 @@ const handleAddComment = newComment => {
   return (
     <Container>
       <MainPart>
-      <BTN onClick={() => navigate('/')}>BACK</BTN>
-      <h2>Деталі автомобіля</h2>
-      <h3>{vehicle.brand}</h3>
-      <p>
-        <strong>Ціна:</strong> {vehicle.price}$
-      </p>
-      <p>
-        <strong>Опис:</strong> {vehicle.description}
-      </p>
-      <div>
-        <h3>Зображення:</h3>
-        {vehicle.images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={vehicle.title}
-            style={{ width: '200px', margin: '10px' }}
-          />
-        ))}
-      </div>
-      <p>
-        <strong>Інформація про гарантію:</strong> {vehicle.warrantyInformation}
-      </p>
-      <p>
-        <strong>Статус доступності:</strong> {vehicle.availabilityStatus}
+        <BTN onClick={() => navigate('/')}>BACK</BTN>
+        <h2>Car details</h2>
+        <h3>{vehicle.brand}</h3>
+        <p>
+          <strong>Price:</strong> {vehicle.price}$
         </p>
-        </MainPart>
+        <p>
+          <strong>Description:</strong> {vehicle.description}
+        </p>
+        <div>
+          <h3>Images:</h3>
+          {vehicle.images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={vehicle.title}
+              style={{ width: '200px', margin: '10px' }}
+            />
+          ))}
+        </div>
+        <p>
+          <strong>Warranty Information:</strong> {vehicle.warrantyInformation}
+        </p>
+        <p>
+          <strong>Availability Status:</strong> {vehicle.availabilityStatus}
+        </p>
+      </MainPart>
       <CommentForm onAddComment={handleAddComment} vehicleId={vehicleId} />
       <CommentList comments={allComments} />{' '}
     </Container>

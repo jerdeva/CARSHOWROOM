@@ -10,7 +10,7 @@ const SearchForm = ({ onSearchChange }) => {
     <SearchWrap>
       <SearchInput
         type="text"
-        placeholder="Пошук за брендом"
+        placeholder="Search by brand"
         onChange={handleInputChange}
       />
     </SearchWrap>

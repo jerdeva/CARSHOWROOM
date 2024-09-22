@@ -27,7 +27,7 @@ const CarList = ({ vehicles }) => {
   return (
     <Container>
       <div>
-        <h1>Автомобілі</h1>
+        <h1>Cars</h1>
         <SearchForm onSearchChange={handleSearchChange} />
       </div>
       {filteredVehicles.length > 0 ? (
@@ -42,10 +42,10 @@ const CarList = ({ vehicles }) => {
                   style={{ margin: '10px' }}
                 />
               )}
-              <Price>Ціна: {vehicle.price}$</Price>
+              <Price>Price: {vehicle.price}$</Price>
             </DescriptionWrap>
             <BtnWrap>
-              <Details href={`#/vehicles/${vehicle.id}`}>Деталі</Details>
+              <Details href={`#/vehicles/${vehicle.id}`}>Details</Details>
             </BtnWrap>
           </List>
         ))
