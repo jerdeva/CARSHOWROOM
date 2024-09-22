@@ -1,4 +1,5 @@
 import React from 'react';
+import { ListItem } from './CommentList.styled';
 
 const CommentList = ({ comments }) => {
   return (
@@ -6,7 +7,7 @@ const CommentList = ({ comments }) => {
       <h3>Коментарі:</h3>
       <ul>
         {comments.map((review, index) => (
-          <li key={index}>
+          <ListItem key={index}>
             <p>
               <strong>Коментар:</strong> {review.comment}
             </p>
@@ -22,7 +23,7 @@ const CommentList = ({ comments }) => {
             <p>
               <strong>Дата:</strong> {review.date}
             </p>
-          </li>
+          </ListItem>
         ))}
       </ul>
     </div>

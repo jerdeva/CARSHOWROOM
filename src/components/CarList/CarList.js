@@ -7,6 +7,8 @@ import {
   Price,
   Photo,
   DescriptionWrap,
+  Details,
+  BtnWrap
 } from './CarList.styled';
 
 
@@ -40,9 +42,11 @@ const CarList = ({ vehicles }) => {
                   style={{ margin: '10px' }}
                 />
               )}
-              <Price>Ціна: {vehicle.price}</Price>
+              <Price>Ціна: {vehicle.price}$</Price>
             </DescriptionWrap>
-            <a href={`#/vehicles/${vehicle.id}`}>Деталі</a>
+            <BtnWrap>
+              <Details href={`#/vehicles/${vehicle.id}`}>Деталі</Details>
+            </BtnWrap>
           </List>
         ))
       ) : (

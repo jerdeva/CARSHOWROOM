@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {FormSt} from './CommentForm.styled'
+import { FormSt, BTN } from './CommentForm.styled';
 
 const CommentForm = ({ onAddComment }) => {
   const [comment, setComment] = useState('');
@@ -24,12 +24,14 @@ const CommentForm = ({ onAddComment }) => {
   };
 
   return (
+    <div>
+    <h2>Залиште свій відгук</h2>
     <FormSt onSubmit={handleSubmit}>
       <input
         type="text"
         value={reviewerName}
         onChange={e => setreviewerName(e.target.value)}
-        placeholder="Имя"
+        placeholder="Им'я"
         required
       />
       <input
@@ -51,11 +53,12 @@ const CommentForm = ({ onAddComment }) => {
       <textarea
         value={comment}
         onChange={e => setComment(e.target.value)}
-        placeholder="Добавить комментарий"
+        placeholder="Додати коментар"
         required
       />
-      <button type="submit">Додати</button>
-    </FormSt>
+      <BTN type="submit">Додати</BTN>
+      </FormSt>
+      </div>
   );
 };
 

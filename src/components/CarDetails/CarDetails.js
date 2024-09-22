@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CommentList from 'components/CommentList/CommentList';
 import CommentForm from 'components/CommentForm/CommentForm';
-import { Container, BTN } from './CarDetails.styled';
+import { Container, BTN, MainPart } from './CarDetails.styled';
 
 
 const CarDetails = () => {
@@ -57,11 +57,16 @@ const handleAddComment = newComment => {
 
   return (
     <Container>
-      <BTN onClick={() => navigate('/')}>back</BTN>
+      <MainPart>
+      <BTN onClick={() => navigate('/')}>BACK</BTN>
       <h2>Деталі автомобіля</h2>
       <h3>{vehicle.brand}</h3>
-      <p>Ціна: {vehicle.price}</p>
-      <p>Опис: {vehicle.description}</p>
+      <p>
+        <strong>Ціна:</strong> {vehicle.price}$
+      </p>
+      <p>
+        <strong>Опис:</strong> {vehicle.description}
+      </p>
       <div>
         <h3>Зображення:</h3>
         {vehicle.images.map((image, index) => (
@@ -73,8 +78,13 @@ const handleAddComment = newComment => {
           />
         ))}
       </div>
-      <p>Інформація про гарантію: {vehicle.warrantyInformation}</p>
-      <p>Статус доступності: {vehicle.availabilityStatus}</p>
+      <p>
+        <strong>Інформація про гарантію:</strong> {vehicle.warrantyInformation}
+      </p>
+      <p>
+        <strong>Статус доступності:</strong> {vehicle.availabilityStatus}
+        </p>
+        </MainPart>
       <CommentForm onAddComment={handleAddComment} vehicleId={vehicleId} />
       <CommentList comments={allComments} />{' '}
     </Container>
