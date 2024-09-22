@@ -26,7 +26,6 @@ const CommentList = ({ comments }) => {
             </p>
             <p>
               <strong>Date:</strong> {new Date(review.date).toLocaleString()}{' '}
-              {/* Преобразуем дату в строку */}
             </p>
           </ListItem>
         ))}
